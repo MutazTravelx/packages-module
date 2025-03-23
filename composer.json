@@ -1,0 +1,45 @@
+{
+    "name": "travelx24/packages-module",
+    "description": "",
+    "type": "laravel-module",
+    "authors": [
+        {
+            "name": "Mutaz Asem",
+            "email": "mu@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "coolsam/modules": "^4.2",
+        "filament/filament": "3.3",
+        "livewire/livewire": "3.5.12",
+        "nwidart/laravel-modules": "*"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23",
+        "pestphp/pest": "^3.7",
+        "pestphp/pest-plugin-laravel": "^3.1",
+        "pestphp/pest-plugin-livewire": "^3.0",
+        "phpunit/phpunit": "^11.5.3",
+        "spatie/laravel-ignition": "^2.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Packages\\": "app/",
+            "Modules\\Packages\\Tests\\": "tests",
+            "Modules\\Packages\\Database\\Factories\\": "database/factories/",
+            "Modules\\Packages\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Packages\\Tests\\": "tests/"
+        }
+    }
+}
