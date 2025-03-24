@@ -2,6 +2,7 @@
     "name": "travelx24/packages-module",
     "description": "",
     "type": "laravel-module",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Mutaz Asem",
@@ -13,7 +14,7 @@
         "coolsam/modules": "^4.2",
         "filament/filament": "3.3",
         "livewire/livewire": "3.5.12",
-        "nwidart/laravel-modules": "*"
+        "nwidart/laravel-modules": "^12.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -21,25 +22,29 @@
         "pestphp/pest-plugin-laravel": "^3.1",
         "pestphp/pest-plugin-livewire": "^3.0",
         "phpunit/phpunit": "^11.5.3",
-        "spatie/laravel-ignition": "^2.4"
+        "spatie/laravel-ignition": "^2.4",
+        "orchestra/testbench": "^9.12"
     },
     "extra": {
         "laravel": {
             "providers": [],
-            "aliases": {}
+            "aliases": []
         }
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Packages\\": "app/",
-            "Modules\\Packages\\Tests\\": "tests",
-            "Modules\\Packages\\Database\\Factories\\": "database/factories/",
-            "Modules\\Packages\\Database\\Seeders\\": "database/seeders/"
+            "Packages\\": "app/",
+            "Packages\\Tests\\": "tests",
+            "Packages\\Database\\Factories\\": "database/factories/",
+            "Packages\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Modules\\Packages\\Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "App\\": "workbench/app/",
+            "Database\\Factories\\": "workbench/database/factories/",
+            "Database\\Seeders\\": "workbench/database/seeders/"
         }
     },
     "config": {
@@ -47,5 +52,19 @@
             "wikimedia/composer-merge-plugin": true,
             "pestphp/pest-plugin": true
         }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve --ansi"
+        ]
     }
 }

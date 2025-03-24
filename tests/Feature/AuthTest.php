@@ -1,7 +1,6 @@
 <?php
 namespace Modules\Packages\Tests\Feature;
 
-
 use App\Models\User;
 use Tests\TestCase;
 use function Pest\Laravel\actingAs;
