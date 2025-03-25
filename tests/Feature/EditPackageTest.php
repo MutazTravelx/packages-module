@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Packages\Tests\Feature;
+namespace Packages\Tests\Feature;
 
 
 use App\Models\User;
@@ -7,9 +7,9 @@ use Filament\Actions\DeleteAction;
 use Filament\Facades\Filament;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use Modules\Packages\Filament\Clusters\Packages\Resources\PackageResource;
-use Modules\Packages\Filament\Clusters\Packages\Resources\PackageResource\Pages\EditPackage;
-use Modules\Packages\Models\Package;
+use Packages\Filament\Clusters\Packages\Resources\PackageResource;
+use Packages\Filament\Clusters\Packages\Resources\PackageResource\Pages\EditPackage;
+use Packages\Models\Package;
 use Tests\TestCase;
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\assertDatabaseHas;

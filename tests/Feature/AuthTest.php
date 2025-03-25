@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Packages\Tests\Feature;
+namespace Packages\Tests\Feature;
 
 use App\Models\User;
 use Tests\TestCase;

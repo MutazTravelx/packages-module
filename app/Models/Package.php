@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Packages\Models;
+namespace Packages\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Modules\Packages\Database\Factories\PackageFactory;
+use Packages\Database\Factories\PackageFactory;
 
-// use Modules\Packages\Database\Factories\PackageFactory;
+// use Packages\Database\Factories\PackageFactory;
 
 class Package extends Model
 {

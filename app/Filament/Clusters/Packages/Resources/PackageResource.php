@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Packages\Filament\Clusters\Packages\Resources;
+namespace Packages\Filament\Clusters\Packages\Resources;
 
-use Modules\Packages\Filament\Clusters\Packages;
-use Modules\Packages\Filament\Clusters\Packages\Resources\PackageResource\Pages;
-use Modules\Packages\Filament\Clusters\Packages\Resources\PackageResource\RelationManagers;
-use Modules\Packages\Models\Package;
+use Packages\Filament\Clusters\Packages;
+use Packages\Filament\Clusters\Packages\Resources\PackageResource\Pages;
+use Packages\Filament\Clusters\Packages\Resources\PackageResource\RelationManagers;
+use Packages\Models\Package;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Section;

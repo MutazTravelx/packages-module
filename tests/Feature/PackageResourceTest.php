@@ -1,11 +1,11 @@
 <?php
-namespace Modules\Packages\Tests\Feature;
+namespace Packages\Tests\Feature;
 
 
 use App\Models\User;
 use Filament\Facades\Filament;
-use Modules\Packages\Filament\Clusters\Packages\Resources\PackageResource;
-use Modules\Packages\Models\Package;
+use Packages\Filament\Clusters\Packages\Resources\PackageResource;
+use Packages\Models\Package;
 use Tests\TestCase;
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\assertDatabaseHas;

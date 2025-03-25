@@ -13,7 +13,10 @@ use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
 use Livewire\LivewireServiceProvider;
+use Packages\Filament\Clusters\Packages\Resources\PackageResource\Pages\CreatePackage;
 use Orchestra\Testbench\TestCase as BaseTestCase;
+use Packages\Filament\Clusters\Packages\Resources\PackageResource;
+use Packages\Tests\Fakes\AdminPanelProvider;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 
 use function Pest\Livewire\livewire;
@@ -23,9 +26,15 @@ abstract class TestCase extends BaseTestCase
     protected function setUp(): void
     {
         parent::setUp();
+        $this->loadLaravelMigrations();
 
     }
 
+    protected function getEnvironmentSetUp($app)
+    {
+        $app['config']->set('app.key','AckfSECXIvnK5r28GVIWUAxmbBSjTsmF');
+    }
+    
     protected function getPackageProviders($app)
     {
         return [
@@ -41,6 +50,9 @@ abstract class TestCase extends BaseTestCase
             SupportServiceProvider::class,
             TablesServiceProvider::class,
             WidgetsServiceProvider::class,
+            AdminPanelProvider::class,
+            // PackageResource::class,
+            // CreatePackage::class,
         ];
     }
 }

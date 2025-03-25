@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Packages\Filament\Clusters;
+namespace Packages\Filament\Clusters;
 
 use Filament\Clusters\Cluster;
 use Nwidart\Modules\Facades\Module;
