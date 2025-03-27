@@ -13,11 +13,13 @@ use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
 use Livewire\LivewireServiceProvider;
+use Nwidart\Modules\LaravelModulesServiceProvider;
 use Packages\Filament\Clusters\Packages\Resources\PackageResource\Pages\CreatePackage;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use Packages\Filament\Clusters\Packages\Resources\PackageResource;
 use Packages\Tests\Fakes\AdminPanelProvider;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 use function Pest\Livewire\livewire;
 
@@ -50,6 +52,8 @@ abstract class TestCase extends BaseTestCase
             SupportServiceProvider::class,
             TablesServiceProvider::class,
             WidgetsServiceProvider::class,
+            LaravelModulesServiceProvider::class,
+            PackageServiceProvider::class,
             AdminPanelProvider::class,
             // PackageResource::class,
             // CreatePackage::class,
